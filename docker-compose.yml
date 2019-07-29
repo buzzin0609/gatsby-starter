@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    image: r.cfcr.io/buzzin0609/buzzin0609/dot-website:master
+    ports:
+      - "4444:80"
+      - "4445:443"
+    expose:
+      - "80"
+      - "443"
