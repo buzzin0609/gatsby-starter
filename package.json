@@ -1,6 +1,6 @@
 {
-  "name": "dot-website",
-  "description": "Website for dotaudiences.com",
+  "name": "gatsby-starter",
+  "description": "Starting files for Gatsby site with Typescript, deployed with Docker",
   "version": "1.0.0",
   "author": "Will Busby",
   "dependencies": {
