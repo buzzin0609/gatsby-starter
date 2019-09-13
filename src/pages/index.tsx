@@ -1,9 +1,10 @@
 import React from 'react';
+import { Box } from 'rebass';
 
 interface Props {}
 
 function Index({  }: Props) {
-  return <div>Hello, World!</div>;
+  return <Box>Hello, World!</Box>;
 }
 
 export default Index;
