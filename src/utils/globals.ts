@@ -16,4 +16,4 @@ export function getWindow(): any {
     scroll: () => {},
     scrollY: 0,
   };
-1}
+}
