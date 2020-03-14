@@ -1,13 +1,21 @@
+import { RouteComponentProps, Router } from '@reach/router';
 import React from 'react';
-import { Box } from 'rebass';
+import Box from '../elements/Box';
 import Layout from '../layout/Layout';
+import NotFoundPage from '../page-templates/404';
+import Home from '../page-templates/home';
 
-interface Props {}
+interface Props extends RouteComponentProps {}
 
-function Index({  }: Props) {
+function Index({}: Props) {
   return (
     <Layout>
-      <Box>Hello, World!</Box>
+      <Box>
+        <Router>
+          <NotFoundPage default />
+          <Home path={'/'} />
+        </Router>
+      </Box>
     </Layout>
   );
 }

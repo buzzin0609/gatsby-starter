@@ -1,7 +1,9 @@
 export const windowDefined = typeof window !== 'undefined';
 
 export function getDocument(): any {
-  if (windowDefined) return window.document;
+  if (windowDefined) {
+    return window.document;
+  }
 
   return {
     getElementById: () => {},
@@ -9,11 +11,19 @@ export function getDocument(): any {
 }
 
 export function getWindow(): any {
-  if (windowDefined) return window;
+  if (windowDefined) {
+    return window;
+  }
 
   return {
     alert: () => {},
     scroll: () => {},
     scrollY: 0,
+    location: {
+      pathname: '',
+    },
+    history: {
+      back: () => {},
+    },
   };
 }

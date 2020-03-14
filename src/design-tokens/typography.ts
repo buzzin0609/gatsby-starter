@@ -18,3 +18,6 @@ export const lineHeights = {
   beta: 49,
   gamma: 27,
 };
+
+export const serif = `"Open Sans", "Arial Narrow", Tahoma, sans-serif`;
+export const sans = `"Open Sans", "Arial Narrow", Tahoma, sans-serif`;

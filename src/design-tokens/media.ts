@@ -1,6 +1,6 @@
-import { css, DefaultTheme, ThemedCssFunction } from 'styled-components';
-import { fill } from './spacing';
+import { css } from 'styled-components';
 import { pin } from './positioning';
+import { fill } from './spacing';
 
 export const coverBg = css`
   background-size: cover;
@@ -39,32 +39,6 @@ export const sizes: { [index: string]: number } = {
   beta: 768,
   gamma: 576,
   delta: 330,
-  //epsilon
-  //zeta
+  // epsilon
+  // zeta
 };
-
-interface MediaQueries {
-  alpha: ThemedCssFunction<DefaultTheme>;
-  beta: ThemedCssFunction<DefaultTheme>;
-  gamma: ThemedCssFunction<DefaultTheme>;
-  delta: ThemedCssFunction<DefaultTheme>;
-}
-
-// Iterate through the sizes and create a media template
-const media: MediaQueries = Object.keys(sizes).reduce(
-  (acc: any, label: string) => {
-    acc[label] = (...args: any) => {
-      return css`
-        @media (max-width: ${sizes[label]}px) {
-          // @ts-ignore
-          ${css(...args)}
-        }
-      `;
-    };
-
-    return acc;
-  },
-  {}
-);
-
-export default media;

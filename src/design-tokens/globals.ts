@@ -1,4 +1,6 @@
 import { css } from 'styled-components';
+import { primary } from './colors';
+import { fontSizes } from './typography';
 
 export const reset = css`
   html,
@@ -85,7 +87,6 @@ export const reset = css`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
   }
@@ -133,5 +134,33 @@ export const reset = css`
   }
   strong {
     font-weight: bold !important;
+  }
+
+  h1 {
+    font-size: ${fontSizes.gamma}px;
+  }
+
+  h2 {
+    font-size: ${fontSizes.delta}px;
+  }
+
+  h3 {
+    font-size: ${fontSizes.epsilon}px;
+  }
+
+  h4 {
+    font-size: ${fontSizes.zeta}px;
+  }
+
+  h5 {
+    font-size: ${fontSizes.eta}px;
+  }
+
+  h6 {
+    font-size: ${fontSizes.theta};
+  }
+
+  a {
+    color: ${primary};
   }
 `;
